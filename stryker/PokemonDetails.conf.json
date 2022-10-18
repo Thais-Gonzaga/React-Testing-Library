@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "mutate": [
+    "src/pages/PokemonDetails.js",
+    "src/components/FavoriteInput.js",
+    "src/components/PokemonData.js"
+  ],
+  "mutator": {
+    "excludedMutations": [
+      "ArithmeticOperator",
+      "ArrayDeclaration",
+      "ArrowFunction",
+      "BlockStatement",
+      "BooleanLiteral",
+      "ConditionalExpression",
+      "EqualityOperator",
+      "LogicalOperator",
+      "MethodExpression",
+      "ObjectLiteral",
+      "UnaryOperator",
+      "UpdateOperator"
+    ]
+  },
+  "testRunner": "command",
+  "commandRunner": {
+    "command": "CI=true npm test 'src/tests/PokemonDetails.test.js'"
+  },
+  "timeoutMS": 20000,
+  "reporters": [
+    "progress",
+    "clear-text",
+    "event-recorder"
+  ],
+  "coverageAnalysis": "off",
+  "jest": {
+    "projectType": "create-react-app"
+  },
+  "warnings": false
+}
