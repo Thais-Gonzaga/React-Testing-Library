@@ -4,12 +4,11 @@ import userEvent from '@testing-library/user-event';
 // import Pokedex from '../pages/Pokedex';
 import App from '../App';
 import renderWithRouter from '../renderWithRouter';
-// import pokemons from '../data';
+import pokemons from '../data';
 
 // const isPokemonFavoriteById = pokemons.map(({ id }) => id);
 
-const names = ['Pikachu', 'Charmander', 'Caterpie', 'Ekans', 'Alakazam', 'Mew', 'Rapidash', 'Snorlax', 'Dragonair'];
-// const names = pokemons.map(({ name }) => name);
+const names = pokemons.map(({ name }) => name);
 describe('teste o componente <Pokedex.js />', () => {
   it('Teste se a página contém um heading h2 com o texto "Encountered pokémons"', () => {
     // pokemon: objeto do pokemon no data.js
